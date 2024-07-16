@@ -1,0 +1,20 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} Compartinos tu Receta {% endblock %}
+{% block section_title %}  Agrega tus Recetas  {% endblock %}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'web/css/recetas_agregar.css'%}">
+{%endblock%}
+
+
+
+{% block main %}
+<h3>Completa los campos para agregar tu Receta</h3>
+<form action="{% url 'agregar' %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Agregar Receta">
+
+</form>
+
+{% endblock%}

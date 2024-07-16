@@ -1,0 +1,19 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} Borrado de Recetas {% endblock %}
+{% block section_title %} Recetas Rapiditas {% endblock %}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'recetas_borrar.css'%}">
+{%endblock%}
+ {% block main %}
+
+ <section>
+  <h2>¿Está seguro que desea borrar la receta "{{ object.titulo }}"?</h2>
+  <form method="post">{% csrf_token %}
+      <button type="submit">Confirmar Borrado</button>
+      <a href="{% url 'recetas_listado' %}">Cancelar</a>
+  </form>
+</section>
+
+
+{% endblock%}

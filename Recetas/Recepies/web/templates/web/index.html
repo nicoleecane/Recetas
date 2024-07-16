@@ -1,0 +1,54 @@
+
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} Bienvenido {% endblock %}
+{% block section_title %} By Nicole Cane {% endblock %}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'web/css/index.css'%}">
+{%endblock%}
+{% block main %}
+<section class="hero">
+  <h2>Descubre el placer de cocinar rápido y delicioso</h2>
+  <p>Explora nuestra colección de recetas fáciles y sabrosas para todos los gustos</p>
+  <a href="{% url 'recetas_listado' %}" class="cta-button">Ver Recetas</a>
+</section>
+
+<section class="featured-recipes">
+  <h3>Recetas Destacadas</h3>
+  <div class="recipe-grid">
+      <div class="recipe-card">
+          <img src="{% static 'web/img/pasta.jpeg' %}" alt="Pasta al Pesto">
+          <h4>Pasta al Pesto</h4>
+          <p>Lista en 15 minutos</p>
+      </div>
+      <div class="recipe-card">
+          <img src="{% static 'web/img/ensalada.jpeg'%}" alt="Ensalada Veraniega">
+          <h4>Ensalada Veraniega</h4>
+          <p>Fresca y nutritiva</p>
+      </div>
+      <div class="recipe-card">
+          <img src="{% static 'web/img/smoothie.jpg' %}" alt="Smoothie Energético">
+          <h4>Smoothie Energético</h4>
+          <p>Perfecto para el desayuno</p>
+      </div>
+  </div>
+</section>
+
+<section class="about-us">
+  <h3>Sobre Nosotros</h3>
+  <p>En Recetas Rápidas, creemos que cocinar delicioso no tiene por qué ser complicado. Nuestra misión es ayudarte a preparar comidas increíbles en poco tiempo, sin sacrificar el sabor ni la calidad.</p>
+</section>
+
+<section class="join-community">
+  <h3>Únete a Nuestra Comunidad</h3>
+  <p>Comparte tus propias recetas, intercambia ideas y trucos de cocina con otros apasionados de la gastronomía.</p>
+  <a href="{% url 'agregar' %}" class="cta-button">Compartir Receta</a>
+</section>
+
+
+{% endblock %}
+
+
+
+
+

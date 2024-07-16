@@ -1,0 +1,47 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Recetas {% block title %}{% endblock %}</title>
+  
+  {% block extra_css %}{% endblock %}
+  <link rel="stylesheet" href="{% static 'web/css/base.css' %}">
+</head>
+<body>
+  <header>
+   <h1>Recetas Rapidas</h1>
+   <h2>{% block section_title %}{% endblock %}</h2>
+   <nav>
+    <ul>
+      <li><a href="{% url 'index' %}"> Home </a></li>
+      <li><a href="{% url 'recetas_listado' %}"> Listado de Recetas</a></li>
+      <li><a href="{% url 'agregar' %}"> Agregar tu propia Receta </a></li>
+      
+      
+
+    </ul>
+   </nav>  
+  </header>
+
+
+
+  <main>
+{% block main %} {% endblock %}
+
+  </main>
+
+
+
+
+
+  <footer>
+    <p>Copyright &copy; 2020</p>
+  </footer>
+
+  
+</body>
+</html>

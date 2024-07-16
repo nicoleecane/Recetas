@@ -1,0 +1,21 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} Modifica tu Receta {% endblock %}
+{% block section_title %}  Hace tu modificaciones  {% endblock %}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'web/css/recetas_editar.css'%}">
+{%endblock%}
+
+
+
+{% block main %}
+<h3>Modifica tu Receta</h3>
+<form action="{% url 'editar' pk=recipe_id %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Update">
+
+</form>
+
+
+{% endblock%}

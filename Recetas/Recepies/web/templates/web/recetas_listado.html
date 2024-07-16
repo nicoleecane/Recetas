@@ -1,0 +1,36 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} Listado de Recetas {% endblock %}
+{% block section_title %} Recetas Rapiditas {% endblock %}
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'web/css/recetas_listado.css' %}">
+{%endblock%}
+ {% block main %}
+
+<section>
+  {% for receta in listado_recetas %}
+  
+  <article>
+    <h2>{{ receta.titulo }}</h2>
+    <p>{{ receta.descripcion }}</p>
+    <p>{{ receta.duracion }}</p>
+    <a href="{% url 'editar' pk=receta.pk %}">Edita tu Receta</a>
+    <a href="{% url 'borrar' pk=receta.pk %}">Elimina tu Receta</a>
+  </article>
+
+  {% empty %}
+  
+  <p>No hay recetas</p>
+  {% endfor %}
+
+
+</section>
+
+{% endblock%}
+
+
+ 
+
+
+
+

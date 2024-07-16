@@ -1,0 +1,19 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title %} Compartinos tu Receta {% endblock %}
+{% block section_title %}  Agrega tus Recetas  {% endblock %}
+{% block extra_css%}
+
+{%endblock%}
+
+
+
+{% block main %}
+
+<h1>{{ receta.titulo }}</h1>
+    <p>{{ receta.descripcion }}</p>
+    <p>Duración: {{ receta.duracion }} minutos</p>
+    <a href="{% url 'editar' receta.pk %}">Editar</a>
+    <a href="{% url 'recetas_listado' %}">Volver al listado</a>
+
+{% endblock%}
