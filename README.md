@@ -7,7 +7,7 @@ Este proyecto es una aplicación web de recetas desarrollada con Django. Permite
 - Django 5.0.7
 - Python 3.x
 - HTML/CSS
-- [Otras tecnologías o librerías que estés usando]
+
 
 ## Autor
 
