@@ -11,5 +11,5 @@ Este proyecto es una aplicación web de recetas desarrollada con Django. Permite
 
 ## Autor
 
-NICOLE CANE
+Grupo 7 
   
