@@ -16,6 +16,7 @@
     <p>{{ receta.duracion }}</p>
     <a href="{% url 'editar' pk=receta.pk %}">Edita tu Receta</a>
     <a href="{% url 'borrar' pk=receta.pk %}">Elimina tu Receta</a>
+    <a href="{% url 'detalle' pk=receta.pk %}">Ver Receta </a>
   </article>
 
   {% empty %}
